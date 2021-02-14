@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Travail Pratique #1</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="css/tp1.css">
+		<script src="js/tp1.js"></script>
+		<h2 id='menu'>menu</h2>
+		<h2 id='auteur'>Travail pratique par Maximilien Bianchi</h2>
+		<h1>Restaurant chez Tchoupie</h1>
+	</head>
+	<body onload="charger();">
+		<div id='menus_deroulant'>
+			<h2>Faites votre choix:</h2>
+			<div id='infoEntree'>
+				Entrée: <select id='Entree' onchange="infosChoixEntree(this);"></select>
+				<img id='imgEntree' src="images/vide.jpg" alt="imgEntree">
+				<p id='prixEntree'>0$</p>
+			</div>
+			<div id='infoRepas'>
+				Repas:  <select id='Repas' onchange="infosChoixRepas(this);"></select>
+				<img id='imgRepas' src="images/vide.jpg" alt="imgRepas">
+				<p id='prixRepas'>0$</p>
+			</div>
+			<br>
+			<div id='total'>
+				<p id='st'>Sous-total:    </p>
+				<p id='tx'>Taxes:    </p>
+				<p id='tt'>Total:    </p>
+			</div>
+		</div>
+		<div id='foot'>
+			<h1>Bon Appétit!</h1>
+		</div>
+	</body>
+</html>

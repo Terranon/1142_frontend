@@ -1,0 +1,92 @@
+Les tableaux:
+
+var tableau = [19, 26, 22, 12, 99];
+var age = 33;
+
+alert(tableau[0]);  // afficher 19
+alert(tableau[4]);  // afficher 99
+alert(tableau[1]);  // afficher 26
+
+age = tableau[2];   // mettre 22 dans le tableau
+
+tableau[1] = 38;
+alert(tableau[1]);  // afficher 38
+
+Les objets (ou tableaux associatifs - on associe un nom 
+  aux index):
+
+Prenons par exemple un objet représentant une personne...
+
+var bob = {"nom": "Bob Larue", "adresse": "123 rue Laval", 
+           "tel": "514-343-5805", "age": 33 };
+var paul ={"nom": "Paul labelle", "adresse": "2900 rue ici",
+           "tel": "514-343-6111", "age": 28 };
+var nom;
+nom = bob["nom"];   // nom vaut "Bob Larue"
+bob["nom"] = "Bob B. Larue";
+alert(bob["nom"]);  // afficher Bob B. Larue
+
+var monEcran = {cat: "Ecran", image: "hp.jpg", prix: 199.50};
+var ordi = {cat: "Ordinateur", image: "ordi.jpg", prix: 899.50};
+
+alert(monEcran["image"]);  // affiche hp.jpg
+
+// supposons que dans ma page Web j'ai:
+// <img src="kk.jpg" alt="kk" id="ici">
+
+document.getElementById("ici").src = monEcran["image"];
+      // hp.jpg
+document.getElementById("ici").src = ordi["image"];     
+      // ordi.jpg
+
+var tabMateriel = [ { }, { }, { } ];
+
+var tabMateriel = [ {cat: "Ecran", image: "hp.jpg", prix: 199.50}, 
+                    {cat: "Ordinateur", image: "ordi.jpg", prix: 899.50} ];
+
+var materiel = tabMateriel[0];  // objet Ecran {cat: "Ecran", image: ...}
+
+materiel = tabMateriel[1]; // objet Ordi... {cat: "Ordinateur", image: ...} 
+
+document.getElementById("ici").src = materiel["image"]; // ordi.jpg
+
+var tabMateriel = [{cat: "Ecran", image: "hp.jpg", prix: 199.50}, 
+                   {cat: "Ordinateur", image: "ordi.jpg", prix: 899.50},
+                   {cat: "Ecran", image: "dell.jpg", prix: 189.50}, 
+                   {cat: "Ordinateur", image: "ordi2.jpg", prix: 999.50}];
+
+var bob = {nom: "Bob Larue", age: 34, sexe: "M", photo: "bob.jpg"};
+var paul = {nom: "Paul Larue", age: 38, sexe: "M", photo: "paul26.jpg"};
+var lucie = {nom: "Lucie Larue", age: 36, sexe: "F", photo: "lucie.jpg"};
+
+var tabPers=[{nom:"Bob Larue", age: 34, sexe: "M", photo: "bob.jpg"},
+             {nom:"Paul Larue", age: 38, sexe: "M", photo: "paul26.jpg"},
+             {nom:"Lucie Larue", age: 36, sexe: "F", photo: "lucie.jpg"}];
+var unePers = tabPersonne[0];
+
+document.getElementById("ici").src = unePers["photo"];
+
+var monMenu = { "ident1": { }, "ident2": { }, "ident3": { } };
+
+var monMenu = { 
+        "HP": {cat: "Ecran", image: "hp.jpg", prix: 199.50}, 
+        "Samsung" : {cat: "Ecran", image: "samsung.jpg", prix: 195.95},
+        "Viewsonic": {cat: "Ecran", image: "vs.jpg", prix: 176.95},
+        "Galaxy": {cat: "Telephone", image: "galaxy.jpg", prix: 1444.25},
+        "Apple": {cat: "Telephone", image: "apple.jpg", prix: 1794.95},
+        "Google": {cat: "Telephone", image: "google.jpg", prix: 1393.95}};
+
+var unObjet = monMenu["Galaxy"];  // {cat: "Telephone", image: "ga ...
+var selection = "Galaxy";
+var unObjet = monMenu[selection]; // {cat: "Telephone", image: "ga ...
+
+  var monMenu = { "HP": {cat: "Ecran", image: "hp.jpg", prix: 199.50}, 
+        "Samsung" : {cat: "Ecran", image: "samsung.jpg", prix: 195.95},
+	"Viewsonic": {cat: "Ecran", image: "vs.jpg", prix: 176.95},
+	"Portable": {cat: "Ordinateur", image: "port.jpg", prix: 1315.95},
+	"Bureau": {cat: "Ordinateur", image: "desk.jpg", prix: 925.95},
+	"Serveur": {cat: "Ordinateur", image: "svr.jpg", prix: 8917.95},
+	"Galaxy": {cat: "Telephone", image: "galaxy.jpg", prix: 1444.25},
+	"Apple": {cat: "Telephone", image: "steak.jpg", prix: 1794.95},
+	"Google": {cat: "Telephone", image: "google.jpg", prix: 1393.95}};
+	
